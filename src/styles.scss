@@ -1,1 +1,81 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    display: flex;
+    height: 100%;
+    body {
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+        display: flex;
+        app-root {
+            flex-grow: 1;
+            display: flex;
+            app-calculator {
+                // flex-grow: 1;
+                display: flex;
+                .calc-wrapper {
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    border: 1px solid black;
+                    font-family: 'Courier New', Courier, monospace;
+                    
+                    .display-wrapper {
+                        height: 20%;
+                        display: flex;
+                        border: 1px solid black;
+                        .display {
+                            flex-grow: 1;
+                            display: flex;
+                            p.value {
+                                flex-grow: 1;
+                                padding: 10px;
+                                display: flex;
+                                justify-content: right;
+                                align-items: center;
+                                font-size: larger;
+                                font-weight: bold;
+                            }
+                            p.operation {
+                                padding: 10px;
+                                width: 20px;
+                                justify-content: right;
+                            }
+                        }
+                    }
+                    .keypad-wrapper {
+                        flex-grow: 1;
+                        margin-top: 10px;
+                        display: flex;
+                        border: 1px solid black;
+                        .keypad {
+                            display: flex;
+                            flex-grow: 1;
+                            flex-direction: column;
+                            // border: 0.5px solid black;
+                            .line {
+                                display: flex;
+                                flex-grow: 1;
+                                .button {
+                                    flex: 1 1;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    cursor: pointer;
+                                    margin: 2px;
+                                    border: 0.5px solid black;
+                                    &.disabled {
+                                        cursor: not-allowed;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<div class="calc-wrapper">
+    <div class="display-wrapper">
+        <div class="display">
+            <p class="operation">{{operation}}</p>
+            <p class="value">{{displayValue}}</p>
+        </div>
+    </div>
+    <div class="keypad-wrapper">
+        <div class="keypad">
+            <div class="line">
+                <div class="button" (click)="buttonClicked('C', 'Operation')">C</div>
+                <div class="button disabled"></div>
+                <div class="button disabled"></div>
+                <div class="button" (click)="buttonClicked('/', 'Operation')">/</div>
+            </div>
+            <div class="line">
+                <div class="button" (click)="buttonClicked('7', 'Number')">7</div>
+                <div class="button" (click)="buttonClicked('8', 'Number')">8</div>
+                <div class="button" (click)="buttonClicked('9', 'Number')">9</div>
+                <div class="button" (click)="buttonClicked('*', 'Operation')">*</div>
+            </div>
+            <div class="line">
+                <div class="button" (click)="buttonClicked('4', 'Number')">4</div>
+                <div class="button" (click)="buttonClicked('5', 'Number')">5</div>
+                <div class="button" (click)="buttonClicked('6', 'Number')">6</div>
+                <div class="button" (click)="buttonClicked('-', 'Operation')">-</div>
+            </div>
+            <div class="line">
+                <div class="button" (click)="buttonClicked('1', 'Number')">1</div>
+                <div class="button" (click)="buttonClicked('2', 'Number')">2</div>
+                <div class="button" (click)="buttonClicked('3', 'Number')">3</div>
+                <div class="button" (click)="buttonClicked('+', 'Operation')">+</div>
+            </div>
+            <div class="line">
+                <div class="button" (click)="buttonClicked('0', 'Number')">0</div>
+                <div class="button" (click)="buttonClicked('00', 'Number')">00</div>
+                <div class="button" (click)="buttonClicked('.', 'Number')">.</div>
+                <div class="button" (click)="buttonClicked('=', 'Operation')">=</div>
+            </div>
+        </div>
+    </div>
+</div>
